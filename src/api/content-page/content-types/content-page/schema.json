@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "content_pages",
+  "info": {
+    "singularName": "content-page",
+    "pluralName": "content-pages",
+    "displayName": "ContentPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "hero-banner.hero-banner",
+        "multi-box-grid.multi-box-grid",
+        "multi-box-row.multi-box-row",
+        "text-with-image.text-with-image"
+      ]
+    }
+  }
+}

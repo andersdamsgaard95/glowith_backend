@@ -1,0 +1,60 @@
+{
+  "collectionName": "components_hero_banner_hero_banners",
+  "info": {
+    "displayName": "Hero Banner",
+    "icon": "monitor",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "heading": {
+      "type": "string"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": true,
+      "component": "button.button"
+    },
+    "backgroundColor": {
+      "type": "component",
+      "repeatable": false,
+      "component": "background-color.background-color"
+    },
+    "text": {
+      "type": "string"
+    },
+    "imageFullBackground": {
+      "type": "boolean"
+    },
+    "textPosition": {
+      "type": "enumeration",
+      "enum": [
+        "Left Bottom",
+        "Left Center",
+        "Left Top",
+        "Right Bottom",
+        "Right Center",
+        "Right Top"
+      ]
+    },
+    "textColorOnImage": {
+      "type": "enumeration",
+      "enum": [
+        "Dark",
+        "Light"
+      ]
+    },
+    "imageZoomOn": {
+      "type": "boolean"
+    }
+  }
+}

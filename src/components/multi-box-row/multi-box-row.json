@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_multi_box_row_multi_box_rows",
+  "info": {
+    "displayName": "MultiBoxRow",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "multiBoxSmall": {
+      "type": "component",
+      "repeatable": true,
+      "component": "multi-box.multi-box",
+      "min": 3,
+      "max": 3
+    },
+    "settings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "block-settings.block-settings"
+    },
+    "description": {
+      "type": "text"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "button.button"
+    },
+    "buttonPosition": {
+      "type": "enumeration",
+      "enum": [
+        "Center (default)",
+        "Left",
+        "Right"
+      ]
+    }
+  }
+}

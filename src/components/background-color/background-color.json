@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_background_color_background_colors",
+  "info": {
+    "displayName": "backgroundColor",
+    "icon": "brush"
+  },
+  "options": {},
+  "attributes": {
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "Theme Blue",
+        "Theme Light Pink",
+        "Theme Dark Pink",
+        "Theme Yellow",
+        "Theme Purple",
+        "Theme Green"
+      ]
+    }
+  }
+}

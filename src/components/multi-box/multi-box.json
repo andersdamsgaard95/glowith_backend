@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_multi_box_multi_boxes",
+  "info": {
+    "displayName": "Multi-box",
+    "icon": "stack",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "backgroundColor": {
+      "type": "component",
+      "repeatable": false,
+      "component": "background-color.background-color"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "textOptionsIfImage": {
+      "type": "enumeration",
+      "enum": [
+        "Displayed underneath (default)",
+        "Visible on hover inside box"
+      ]
+    },
+    "text": {
+      "type": "richtext"
+    }
+  }
+}

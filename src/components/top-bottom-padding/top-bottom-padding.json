@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_top_bottom_padding_top_bottom_paddings",
+  "info": {
+    "displayName": "Top/Bottom-Padding",
+    "icon": "expand"
+  },
+  "options": {},
+  "attributes": {
+    "paddingTop": {
+      "type": "enumeration",
+      "enum": [
+        "Default 50px",
+        "Small 25px",
+        "None"
+      ]
+    },
+    "paddingBottom": {
+      "type": "enumeration",
+      "enum": [
+        "Default 50px",
+        "Small 25px",
+        "None"
+      ]
+    }
+  }
+}

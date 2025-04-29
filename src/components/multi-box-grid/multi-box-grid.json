@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_multi_box_grid_multi_box_grids",
+  "info": {
+    "displayName": "Multi-box-grid",
+    "icon": "grid",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "multiBoxSmall": {
+      "type": "component",
+      "repeatable": true,
+      "component": "multi-box.multi-box",
+      "min": 2,
+      "max": 2
+    },
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "multiBoxBig": {
+      "type": "component",
+      "repeatable": false,
+      "component": "multi-box.multi-box"
+    },
+    "bigBoxLeft": {
+      "type": "boolean"
+    },
+    "settings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "block-settings.block-settings"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "button.button"
+    },
+    "buttonPosition": {
+      "type": "enumeration",
+      "enum": [
+        "Center (default)",
+        "Left",
+        "Right"
+      ]
+    }
+  }
+}

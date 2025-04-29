@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_block_settings_block_settings",
+  "info": {
+    "displayName": "BlockSettings",
+    "icon": "cog",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "backgroundColor": {
+      "type": "component",
+      "repeatable": false,
+      "component": "background-color.background-color"
+    },
+    "blockPadding": {
+      "type": "component",
+      "repeatable": false,
+      "component": "top-bottom-padding.top-bottom-padding"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "collectionName": "components_text_with_image_text_with_images",
+  "info": {
+    "displayName": "textWithImage",
+    "icon": "picture",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "richtext"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "button.button"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "imagePosition": {
+      "type": "enumeration",
+      "enum": [
+        "Left (default)",
+        "Right"
+      ]
+    },
+    "imageOptions": {
+      "type": "enumeration",
+      "enum": [
+        "Cover",
+        "Add margin"
+      ]
+    },
+    "settings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "block-settings.block-settings"
+    },
+    "textBackgroundColor": {
+      "type": "component",
+      "repeatable": false,
+      "component": "background-color.background-color"
+    }
+  }
+}
