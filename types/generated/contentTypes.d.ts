@@ -407,6 +407,120 @@ export interface ApiContentPageContentPage extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiMenuMenu extends Struct.CollectionTypeSchema {
+  collectionName: 'menus';
+  info: {
+    description: '';
+    displayName: 'Menu';
+    pluralName: 'menus';
+    singularName: 'menu';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    destinationPath: Schema.Attribute.String;
+    displayOrder: Schema.Attribute.Integer;
+    inspirationLink: Schema.Attribute.Component<
+      'header-nested-components.sub-menu-inspiration-link',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::menu.menu'> &
+      Schema.Attribute.Private;
+    menuChild: Schema.Attribute.Component<'menu-item.menu-item', true>;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiProductCategoryPageProductCategoryPage
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'product_category_pages';
+  info: {
+    description: '';
+    displayName: 'Product Category Page';
+    pluralName: 'product-category-pages';
+    singularName: 'product-category-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blocksAfterProducts: Schema.Attribute.DynamicZone<
+      [
+        'text-with-image.text-with-image',
+        'multi-box-row.multi-box-row',
+        'multi-box-grid.multi-box-grid',
+        'hero-banner.hero-banner',
+      ]
+    >;
+    blocksBeforeProducts: Schema.Attribute.DynamicZone<
+      [
+        'hero-banner.hero-banner',
+        'multi-box-grid.multi-box-grid',
+        'multi-box-row.multi-box-row',
+        'text-with-image.text-with-image',
+      ]
+    >;
+    category: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::product-category-page.product-category-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiProductProduct extends Struct.CollectionTypeSchema {
+  collectionName: 'products';
+  info: {
+    description: '';
+    displayName: 'Product';
+    pluralName: 'products';
+    singularName: 'product';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    category: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'videos', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::product.product'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    pdpSlug: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -917,6 +1031,9 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::content-page.content-page': ApiContentPageContentPage;
+      'api::menu.menu': ApiMenuMenu;
+      'api::product-category-page.product-category-page': ApiProductCategoryPageProductCategoryPage;
+      'api::product.product': ApiProductProduct;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

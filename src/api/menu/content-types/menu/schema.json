@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menus",
+  "info": {
+    "singularName": "menu",
+    "pluralName": "menus",
+    "displayName": "Menu",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "destinationPath": {
+      "type": "string"
+    },
+    "menuChild": {
+      "type": "component",
+      "repeatable": true,
+      "component": "menu-item.menu-item"
+    },
+    "displayOrder": {
+      "type": "integer"
+    },
+    "inspirationLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "header-nested-components.sub-menu-inspiration-link"
+    }
+  }
+}

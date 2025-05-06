@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_header_nested_components_sub_menu_inspiration_links",
+  "info": {
+    "displayName": "subMenuInspirationLink",
+    "icon": "picture"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "destinationPath": {
+      "type": "string"
+    }
+  }
+}

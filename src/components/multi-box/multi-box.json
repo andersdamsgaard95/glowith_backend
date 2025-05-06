@@ -14,7 +14,7 @@
     },
     "image": {
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "allowedTypes": [
         "images",
@@ -31,6 +31,16 @@
     },
     "text": {
       "type": "richtext"
+    },
+    "imageOptions": {
+      "type": "enumeration",
+      "enum": [
+        "Shift automatically",
+        "Shift to next on hover"
+      ]
+    },
+    "link": {
+      "type": "string"
     }
   }
 }

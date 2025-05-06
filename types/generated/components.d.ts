@@ -3,18 +3,22 @@ import type { Schema, Struct } from '@strapi/strapi';
 export interface BackgroundColorBackgroundColor extends Struct.ComponentSchema {
   collectionName: 'components_background_color_background_colors';
   info: {
+    description: '';
     displayName: 'backgroundColor';
     icon: 'brush';
   };
   attributes: {
     color: Schema.Attribute.Enumeration<
       [
+        'None',
         'Theme Blue',
         'Theme Light Pink',
         'Theme Dark Pink',
         'Theme Yellow',
         'Theme Purple',
         'Theme Green',
+        'Theme White',
+        'Theme Black',
       ]
     >;
   };
@@ -56,6 +60,20 @@ export interface ButtonButton extends Struct.ComponentSchema {
   };
 }
 
+export interface HeaderNestedComponentsSubMenuInspirationLink
+  extends Struct.ComponentSchema {
+  collectionName: 'components_header_nested_components_sub_menu_inspiration_links';
+  info: {
+    displayName: 'subMenuInspirationLink';
+    icon: 'picture';
+  };
+  attributes: {
+    destinationPath: Schema.Attribute.String;
+    heading: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 export interface HeroBannerHeroBanner extends Struct.ComponentSchema {
   collectionName: 'components_hero_banner_hero_banners';
   info: {
@@ -85,6 +103,20 @@ export interface HeroBannerHeroBanner extends Struct.ComponentSchema {
         'Right Top',
       ]
     >;
+  };
+}
+
+export interface MenuItemMenuItem extends Struct.ComponentSchema {
+  collectionName: 'components_menu_item_menu_items';
+  info: {
+    description: '';
+    displayName: 'menuItem';
+    icon: 'bulletList';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    destinationPath: Schema.Attribute.String;
+    name: Schema.Attribute.String;
   };
 }
 
@@ -160,7 +192,11 @@ export interface MultiBoxMultiBox extends Struct.ComponentSchema {
       'background-color.background-color',
       false
     >;
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos', true>;
+    imageOptions: Schema.Attribute.Enumeration<
+      ['Shift automatically', 'Shift to next on hover']
+    >;
+    link: Schema.Attribute.String;
     text: Schema.Attribute.RichText;
     textOptionsIfImage: Schema.Attribute.Enumeration<
       ['Displayed underneath (default)', 'Visible on hover inside box']
@@ -215,7 +251,9 @@ declare module '@strapi/strapi' {
       'background-color.background-color': BackgroundColorBackgroundColor;
       'block-settings.block-settings': BlockSettingsBlockSettings;
       'button.button': ButtonButton;
+      'header-nested-components.sub-menu-inspiration-link': HeaderNestedComponentsSubMenuInspirationLink;
       'hero-banner.hero-banner': HeroBannerHeroBanner;
+      'menu-item.menu-item': MenuItemMenuItem;
       'multi-box-grid.multi-box-grid': MultiBoxGridMultiBoxGrid;
       'multi-box-row.multi-box-row': MultiBoxRowMultiBoxRow;
       'multi-box.multi-box': MultiBoxMultiBox;

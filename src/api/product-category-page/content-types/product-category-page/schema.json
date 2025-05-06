@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_category_pages",
+  "info": {
+    "singularName": "product-category-page",
+    "pluralName": "product-category-pages",
+    "displayName": "Product Category Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "blocksBeforeProducts": {
+      "type": "dynamiczone",
+      "components": [
+        "hero-banner.hero-banner",
+        "multi-box-grid.multi-box-grid",
+        "multi-box-row.multi-box-row",
+        "text-with-image.text-with-image"
+      ]
+    },
+    "blocksAfterProducts": {
+      "type": "dynamiczone",
+      "components": [
+        "text-with-image.text-with-image",
+        "multi-box-row.multi-box-row",
+        "multi-box-grid.multi-box-grid",
+        "hero-banner.hero-banner"
+      ]
+    },
+    "category": {
+      "type": "string"
+    }
+  }
+}
