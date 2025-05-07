@@ -17,9 +17,6 @@
     "category": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
     "image": {
       "type": "media",
       "multiple": true,
@@ -31,6 +28,9 @@
     },
     "pdpSlug": {
       "type": "string"
+    },
+    "description": {
+      "type": "richtext"
     }
   }
 }

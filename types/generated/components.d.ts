@@ -140,7 +140,7 @@ export interface MultiBoxGridMultiBoxGrid extends Struct.ComponentSchema {
       Schema.Attribute.SetMinMax<
         {
           max: 2;
-          min: 2;
+          min: 1;
         },
         number
       >;
