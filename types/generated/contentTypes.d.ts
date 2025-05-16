@@ -543,6 +543,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String;
     pdpSlug: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    shortDescription: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
