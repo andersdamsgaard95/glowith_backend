@@ -41,6 +41,9 @@
     },
     "link": {
       "type": "string"
+    },
+    "openLinkInNewTab": {
+      "type": "boolean"
     }
   }
 }

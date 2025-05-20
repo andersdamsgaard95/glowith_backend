@@ -197,6 +197,7 @@ export interface MultiBoxMultiBox extends Struct.ComponentSchema {
       ['Shift automatically', 'Shift to next on hover']
     >;
     link: Schema.Attribute.String;
+    openLinkInNewTab: Schema.Attribute.Boolean;
     text: Schema.Attribute.RichText;
     textOptionsIfImage: Schema.Attribute.Enumeration<
       ['Displayed underneath (default)', 'Visible on hover inside box']
