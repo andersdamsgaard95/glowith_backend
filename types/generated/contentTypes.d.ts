@@ -387,6 +387,7 @@ export interface ApiContentPageContentPage extends Struct.CollectionTypeSchema {
         'multi-box-grid.multi-box-grid',
         'multi-box-row.multi-box-row',
         'text-with-image.text-with-image',
+        'carrousel-text.carrousel-text',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -398,6 +399,7 @@ export interface ApiContentPageContentPage extends Struct.CollectionTypeSchema {
       'api::content-page.content-page'
     > &
       Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.String & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
@@ -507,6 +509,7 @@ export interface ApiProductCategoryPageProductCategoryPage
       'api::product-category-page.product-category-page'
     > &
       Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.String;
     title: Schema.Attribute.String;
@@ -533,13 +536,17 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.RichText;
-    image: Schema.Attribute.Media<'images' | 'videos', true>;
+    imageCoverOrContain: Schema.Attribute.Component<
+      'nested-components.image-cover-or-contain',
+      true
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::product.product'
     > &
       Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
     name: Schema.Attribute.String;
     pdpSlug: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;

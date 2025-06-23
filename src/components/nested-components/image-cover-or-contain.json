@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_nested_components_image_cover_or_contains",
+  "info": {
+    "displayName": "imageCoverOrContain"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "isProductImage": {
+      "type": "boolean"
+    }
+  }
+}

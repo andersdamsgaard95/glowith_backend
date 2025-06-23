@@ -25,8 +25,12 @@
         "hero-banner.hero-banner",
         "multi-box-grid.multi-box-grid",
         "multi-box-row.multi-box-row",
-        "text-with-image.text-with-image"
+        "text-with-image.text-with-image",
+        "carrousel-text.carrousel-text"
       ]
+    },
+    "metaDescription": {
+      "type": "text"
     }
   }
 }

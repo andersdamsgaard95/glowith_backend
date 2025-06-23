@@ -60,6 +60,20 @@ export interface ButtonButton extends Struct.ComponentSchema {
   };
 }
 
+export interface CarrouselTextCarrouselText extends Struct.ComponentSchema {
+  collectionName: 'components_carrousel_text_carrousel_texts';
+  info: {
+    displayName: 'Carrousel-text';
+  };
+  attributes: {
+    settings: Schema.Attribute.Component<
+      'block-settings.block-settings',
+      false
+    >;
+    text: Schema.Attribute.String;
+  };
+}
+
 export interface HeaderNestedComponentsSubMenuInspirationLink
   extends Struct.ComponentSchema {
   collectionName: 'components_header_nested_components_sub_menu_inspiration_links';
@@ -192,7 +206,10 @@ export interface MultiBoxMultiBox extends Struct.ComponentSchema {
       'background-color.background-color',
       false
     >;
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos', true>;
+    imageCoverOrContain: Schema.Attribute.Component<
+      'nested-components.image-cover-or-contain',
+      true
+    >;
     imageOptions: Schema.Attribute.Enumeration<
       ['Shift automatically', 'Shift to next on hover']
     >;
@@ -202,6 +219,18 @@ export interface MultiBoxMultiBox extends Struct.ComponentSchema {
     textOptionsIfImage: Schema.Attribute.Enumeration<
       ['Displayed underneath (default)', 'Visible on hover inside box']
     >;
+  };
+}
+
+export interface NestedComponentsImageCoverOrContain
+  extends Struct.ComponentSchema {
+  collectionName: 'components_nested_components_image_cover_or_contains';
+  info: {
+    displayName: 'imageCoverOrContain';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    isProductImage: Schema.Attribute.Boolean;
   };
 }
 
@@ -252,12 +281,14 @@ declare module '@strapi/strapi' {
       'background-color.background-color': BackgroundColorBackgroundColor;
       'block-settings.block-settings': BlockSettingsBlockSettings;
       'button.button': ButtonButton;
+      'carrousel-text.carrousel-text': CarrouselTextCarrouselText;
       'header-nested-components.sub-menu-inspiration-link': HeaderNestedComponentsSubMenuInspirationLink;
       'hero-banner.hero-banner': HeroBannerHeroBanner;
       'menu-item.menu-item': MenuItemMenuItem;
       'multi-box-grid.multi-box-grid': MultiBoxGridMultiBoxGrid;
       'multi-box-row.multi-box-row': MultiBoxRowMultiBoxRow;
       'multi-box.multi-box': MultiBoxMultiBox;
+      'nested-components.image-cover-or-contain': NestedComponentsImageCoverOrContain;
       'text-with-image.text-with-image': TextWithImageTextWithImage;
       'top-bottom-padding.top-bottom-padding': TopBottomPaddingTopBottomPadding;
     }

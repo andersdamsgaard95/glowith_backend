@@ -12,16 +12,6 @@
       "repeatable": false,
       "component": "background-color.background-color"
     },
-    "image": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ]
-    },
     "textOptionsIfImage": {
       "type": "enumeration",
       "enum": [
@@ -44,6 +34,11 @@
     },
     "openLinkInNewTab": {
       "type": "boolean"
+    },
+    "imageCoverOrContain": {
+      "type": "component",
+      "repeatable": true,
+      "component": "nested-components.image-cover-or-contain"
     }
   }
 }

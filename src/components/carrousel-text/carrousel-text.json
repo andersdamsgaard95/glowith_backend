@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_carrousel_text_carrousel_texts",
+  "info": {
+    "displayName": "Carrousel-text"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "settings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "block-settings.block-settings"
+    }
+  }
+}

@@ -17,15 +17,6 @@
     "category": {
       "type": "string"
     },
-    "image": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "videos"
-      ]
-    },
     "pdpSlug": {
       "type": "string"
     },
@@ -34,6 +25,14 @@
     },
     "shortDescription": {
       "type": "string"
+    },
+    "imageCoverOrContain": {
+      "type": "component",
+      "repeatable": true,
+      "component": "nested-components.image-cover-or-contain"
+    },
+    "metaDescription": {
+      "type": "text"
     }
   }
 }
