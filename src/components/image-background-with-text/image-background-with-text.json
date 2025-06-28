@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_image_background_with_text_image_background_with_texts",
+  "info": {
+    "displayName": "Image Background With Text",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "heading": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "button.button"
+    },
+    "Minimum_Height_In_Px": {
+      "type": "integer"
+    },
+    "Add_Text_Background_Contrast_Layer": {
+      "type": "boolean"
+    }
+  }
+}

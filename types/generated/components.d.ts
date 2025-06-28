@@ -74,6 +74,43 @@ export interface CarrouselTextCarrouselText extends Struct.ComponentSchema {
   };
 }
 
+export interface DividersDividerColorFade extends Struct.ComponentSchema {
+  collectionName: 'components_dividers_divider_color_fades';
+  info: {
+    description: '';
+    displayName: 'Divider Color Fade';
+  };
+  attributes: {
+    backgroundColor: Schema.Attribute.Component<
+      'background-color.background-color',
+      false
+    > &
+      Schema.Attribute.Required;
+    blockHeight: Schema.Attribute.Enumeration<['Small 50px', 'Default 100px']>;
+    fadeDirection: Schema.Attribute.Enumeration<
+      ['From top (default)', 'From bottom']
+    >;
+  };
+}
+
+export interface DividersLineDivider extends Struct.ComponentSchema {
+  collectionName: 'components_dividers_line_dividers';
+  info: {
+    displayName: 'Line Divider';
+  };
+  attributes: {
+    backgroundColor: Schema.Attribute.Component<
+      'background-color.background-color',
+      false
+    >;
+    blockHeight: Schema.Attribute.Enumeration<['Small 50px', 'Default 100px']>;
+    lineColor: Schema.Attribute.Component<
+      'background-color.background-color',
+      false
+    >;
+  };
+}
+
 export interface HeaderNestedComponentsSubMenuInspirationLink
   extends Struct.ComponentSchema {
   collectionName: 'components_header_nested_components_sub_menu_inspiration_links';
@@ -117,6 +154,23 @@ export interface HeroBannerHeroBanner extends Struct.ComponentSchema {
         'Right Top',
       ]
     >;
+  };
+}
+
+export interface ImageBackgroundWithTextImageBackgroundWithText
+  extends Struct.ComponentSchema {
+  collectionName: 'components_image_background_with_text_image_background_with_texts';
+  info: {
+    description: '';
+    displayName: 'Image Background With Text';
+  };
+  attributes: {
+    Add_Text_Background_Contrast_Layer: Schema.Attribute.Boolean;
+    button: Schema.Attribute.Component<'button.button', false>;
+    heading: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Minimum_Height_In_Px: Schema.Attribute.Integer;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -282,8 +336,11 @@ declare module '@strapi/strapi' {
       'block-settings.block-settings': BlockSettingsBlockSettings;
       'button.button': ButtonButton;
       'carrousel-text.carrousel-text': CarrouselTextCarrouselText;
+      'dividers.divider-color-fade': DividersDividerColorFade;
+      'dividers.line-divider': DividersLineDivider;
       'header-nested-components.sub-menu-inspiration-link': HeaderNestedComponentsSubMenuInspirationLink;
       'hero-banner.hero-banner': HeroBannerHeroBanner;
+      'image-background-with-text.image-background-with-text': ImageBackgroundWithTextImageBackgroundWithText;
       'menu-item.menu-item': MenuItemMenuItem;
       'multi-box-grid.multi-box-grid': MultiBoxGridMultiBoxGrid;
       'multi-box-row.multi-box-row': MultiBoxRowMultiBoxRow;

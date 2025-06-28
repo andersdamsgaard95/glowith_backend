@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_dividers_line_dividers",
+  "info": {
+    "displayName": "Line Divider"
+  },
+  "options": {},
+  "attributes": {
+    "lineColor": {
+      "type": "component",
+      "repeatable": false,
+      "component": "background-color.background-color"
+    },
+    "backgroundColor": {
+      "type": "component",
+      "repeatable": false,
+      "component": "background-color.background-color"
+    },
+    "blockHeight": {
+      "type": "enumeration",
+      "enum": [
+        "Small 50px",
+        "Default 100px"
+      ]
+    }
+  }
+}

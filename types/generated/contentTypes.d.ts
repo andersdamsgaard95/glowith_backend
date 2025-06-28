@@ -388,6 +388,9 @@ export interface ApiContentPageContentPage extends Struct.CollectionTypeSchema {
         'multi-box-row.multi-box-row',
         'text-with-image.text-with-image',
         'carrousel-text.carrousel-text',
+        'dividers.line-divider',
+        'dividers.divider-color-fade',
+        'image-background-with-text.image-background-with-text',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -489,6 +492,9 @@ export interface ApiProductCategoryPageProductCategoryPage
         'multi-box-row.multi-box-row',
         'multi-box-grid.multi-box-grid',
         'hero-banner.hero-banner',
+        'dividers.line-divider',
+        'dividers.divider-color-fade',
+        'image-background-with-text.image-background-with-text',
       ]
     >;
     blocksBeforeProducts: Schema.Attribute.DynamicZone<
@@ -497,6 +503,9 @@ export interface ApiProductCategoryPageProductCategoryPage
         'multi-box-grid.multi-box-grid',
         'multi-box-row.multi-box-row',
         'text-with-image.text-with-image',
+        'dividers.line-divider',
+        'dividers.divider-color-fade',
+        'image-background-with-text.image-background-with-text',
       ]
     >;
     category: Schema.Attribute.String;

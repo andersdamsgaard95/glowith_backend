@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_dividers_divider_color_fades",
+  "info": {
+    "displayName": "Divider Color Fade",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "blockHeight": {
+      "type": "enumeration",
+      "enum": [
+        "Small 50px",
+        "Default 100px"
+      ]
+    },
+    "backgroundColor": {
+      "type": "component",
+      "repeatable": false,
+      "component": "background-color.background-color",
+      "required": true
+    },
+    "fadeDirection": {
+      "type": "enumeration",
+      "enum": [
+        "From top (default)",
+        "From bottom"
+      ]
+    }
+  }
+}
