@@ -33,6 +33,11 @@
     },
     "metaDescription": {
       "type": "text"
+    },
+    "Display_Background_Color": {
+      "type": "component",
+      "repeatable": false,
+      "component": "background-color.background-color"
     }
   }
 }

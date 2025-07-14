@@ -55,6 +55,9 @@
     },
     "imageZoomOn": {
       "type": "boolean"
+    },
+    "Text_Contrast_Background_Fade": {
+      "type": "boolean"
     }
   }
 }

@@ -39,6 +39,9 @@
       "type": "component",
       "repeatable": true,
       "component": "nested-components.image-cover-or-contain"
+    },
+    "Button_Text": {
+      "type": "string"
     }
   }
 }

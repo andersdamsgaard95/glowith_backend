@@ -29,7 +29,8 @@
         "carrousel-text.carrousel-text",
         "dividers.line-divider",
         "dividers.divider-color-fade",
-        "image-background-with-text.image-background-with-text"
+        "image-background-with-text.image-background-with-text",
+        "image-alone.image-alone"
       ]
     },
     "metaDescription": {

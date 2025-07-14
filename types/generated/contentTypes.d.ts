@@ -391,6 +391,7 @@ export interface ApiContentPageContentPage extends Struct.CollectionTypeSchema {
         'dividers.line-divider',
         'dividers.divider-color-fade',
         'image-background-with-text.image-background-with-text',
+        'image-alone.image-alone',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -495,6 +496,8 @@ export interface ApiProductCategoryPageProductCategoryPage
         'dividers.line-divider',
         'dividers.divider-color-fade',
         'image-background-with-text.image-background-with-text',
+        'image-alone.image-alone',
+        'carrousel-text.carrousel-text',
       ]
     >;
     blocksBeforeProducts: Schema.Attribute.DynamicZone<
@@ -506,6 +509,8 @@ export interface ApiProductCategoryPageProductCategoryPage
         'dividers.line-divider',
         'dividers.divider-color-fade',
         'image-background-with-text.image-background-with-text',
+        'image-alone.image-alone',
+        'carrousel-text.carrousel-text',
       ]
     >;
     category: Schema.Attribute.String;
@@ -545,6 +550,10 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.RichText;
+    Display_Background_Color: Schema.Attribute.Component<
+      'background-color.background-color',
+      false
+    >;
     imageCoverOrContain: Schema.Attribute.Component<
       'nested-components.image-cover-or-contain',
       true

@@ -12,7 +12,7 @@
     },
     "button": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "button.button"
     },
     "image": {
@@ -31,13 +31,6 @@
       "enum": [
         "Left (default)",
         "Right"
-      ]
-    },
-    "imageOptions": {
-      "type": "enumeration",
-      "enum": [
-        "Cover",
-        "Add margin"
       ]
     },
     "settings": {

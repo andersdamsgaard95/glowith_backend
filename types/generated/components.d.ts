@@ -143,6 +143,7 @@ export interface HeroBannerHeroBanner extends Struct.ComponentSchema {
     imageFullBackground: Schema.Attribute.Boolean;
     imageZoomOn: Schema.Attribute.Boolean;
     text: Schema.Attribute.String;
+    Text_Contrast_Background_Fade: Schema.Attribute.Boolean;
     textColorOnImage: Schema.Attribute.Enumeration<['Dark', 'Light']>;
     textPosition: Schema.Attribute.Enumeration<
       [
@@ -154,6 +155,24 @@ export interface HeroBannerHeroBanner extends Struct.ComponentSchema {
         'Right Top',
       ]
     >;
+  };
+}
+
+export interface ImageAloneImageAlone extends Struct.ComponentSchema {
+  collectionName: 'components_image_alone_image_alones';
+  info: {
+    description: '';
+    displayName: 'Image Alone';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Max_Width_In_Px: Schema.Attribute.Integer;
+    settings: Schema.Attribute.Component<
+      'block-settings.block-settings',
+      false
+    >;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -260,6 +279,7 @@ export interface MultiBoxMultiBox extends Struct.ComponentSchema {
       'background-color.background-color',
       false
     >;
+    Button_Text: Schema.Attribute.String;
     imageCoverOrContain: Schema.Attribute.Component<
       'nested-components.image-cover-or-contain',
       true
@@ -296,9 +316,8 @@ export interface TextWithImageTextWithImage extends Struct.ComponentSchema {
     icon: 'picture';
   };
   attributes: {
-    button: Schema.Attribute.Component<'button.button', false>;
+    button: Schema.Attribute.Component<'button.button', true>;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    imageOptions: Schema.Attribute.Enumeration<['Cover', 'Add margin']>;
     imagePosition: Schema.Attribute.Enumeration<['Left (default)', 'Right']>;
     settings: Schema.Attribute.Component<
       'block-settings.block-settings',
@@ -340,6 +359,7 @@ declare module '@strapi/strapi' {
       'dividers.line-divider': DividersLineDivider;
       'header-nested-components.sub-menu-inspiration-link': HeaderNestedComponentsSubMenuInspirationLink;
       'hero-banner.hero-banner': HeroBannerHeroBanner;
+      'image-alone.image-alone': ImageAloneImageAlone;
       'image-background-with-text.image-background-with-text': ImageBackgroundWithTextImageBackgroundWithText;
       'menu-item.menu-item': MenuItemMenuItem;
       'multi-box-grid.multi-box-grid': MultiBoxGridMultiBoxGrid;

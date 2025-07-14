@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_image_alone_image_alones",
+  "info": {
+    "displayName": "Image Alone",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "settings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "block-settings.block-settings"
+    },
+    "Max_Width_In_Px": {
+      "type": "integer"
+    }
+  }
+}
