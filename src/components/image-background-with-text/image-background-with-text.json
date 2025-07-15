@@ -33,6 +33,13 @@
     },
     "Add_Text_Background_Contrast_Layer": {
       "type": "boolean"
+    },
+    "Text_Color": {
+      "type": "enumeration",
+      "enum": [
+        "Dark (default)",
+        "Light"
+      ]
     }
   }
 }

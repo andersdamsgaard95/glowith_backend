@@ -165,6 +165,8 @@ export interface ImageAloneImageAlone extends Struct.ComponentSchema {
     displayName: 'Image Alone';
   };
   attributes: {
+    button: Schema.Attribute.Component<'button.button', false>;
+    Center_Text: Schema.Attribute.Boolean;
     heading: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Max_Width_In_Px: Schema.Attribute.Integer;
@@ -190,6 +192,7 @@ export interface ImageBackgroundWithTextImageBackgroundWithText
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Minimum_Height_In_Px: Schema.Attribute.Integer;
     text: Schema.Attribute.Text;
+    Text_Color: Schema.Attribute.Enumeration<['Dark (default)', 'Light']>;
   };
 }
 
