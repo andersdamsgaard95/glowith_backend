@@ -565,6 +565,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
     name: Schema.Attribute.String;
     pdpSlug: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
