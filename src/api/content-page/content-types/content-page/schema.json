@@ -30,7 +30,8 @@
         "dividers.line-divider",
         "dividers.divider-color-fade",
         "image-background-with-text.image-background-with-text",
-        "image-alone.image-alone"
+        "image-alone.image-alone",
+        "slider.product-slider"
       ]
     },
     "metaDescription": {

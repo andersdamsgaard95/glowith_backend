@@ -58,6 +58,13 @@
     },
     "Text_Contrast_Background_Fade": {
       "type": "boolean"
+    },
+    "Block_height": {
+      "type": "enumeration",
+      "enum": [
+        "Default 100% view height",
+        "Smaller 80% view height"
+      ]
     }
   }
 }

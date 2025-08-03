@@ -137,6 +137,9 @@ export interface HeroBannerHeroBanner extends Struct.ComponentSchema {
       'background-color.background-color',
       false
     >;
+    Block_height: Schema.Attribute.Enumeration<
+      ['Default 100% view height', 'Smaller 80% view height']
+    >;
     button: Schema.Attribute.Component<'button.button', true>;
     heading: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'videos'>;
@@ -311,6 +314,26 @@ export interface NestedComponentsImageCoverOrContain
   };
 }
 
+export interface SliderProductSlider extends Struct.ComponentSchema {
+  collectionName: 'components_slider_product_sliders';
+  info: {
+    description: '';
+    displayName: 'Product Slider';
+    icon: 'arrowRight';
+  };
+  attributes: {
+    Description: Schema.Attribute.Text;
+    Heading: Schema.Attribute.String;
+    settings: Schema.Attribute.Component<
+      'block-settings.block-settings',
+      false
+    >;
+    Type_of_products: Schema.Attribute.Enumeration<
+      ['New arrivals', 'Featured', 'Eye masks', 'All products']
+    >;
+  };
+}
+
 export interface TextWithImageTextWithImage extends Struct.ComponentSchema {
   collectionName: 'components_text_with_image_text_with_images';
   info: {
@@ -369,6 +392,7 @@ declare module '@strapi/strapi' {
       'multi-box-row.multi-box-row': MultiBoxRowMultiBoxRow;
       'multi-box.multi-box': MultiBoxMultiBox;
       'nested-components.image-cover-or-contain': NestedComponentsImageCoverOrContain;
+      'slider.product-slider': SliderProductSlider;
       'text-with-image.text-with-image': TextWithImageTextWithImage;
       'top-bottom-padding.top-bottom-padding': TopBottomPaddingTopBottomPadding;
     }

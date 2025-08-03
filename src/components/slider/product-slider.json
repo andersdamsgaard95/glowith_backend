@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_slider_product_sliders",
+  "info": {
+    "displayName": "Product Slider",
+    "icon": "arrowRight",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Type_of_products": {
+      "type": "enumeration",
+      "enum": [
+        "New arrivals",
+        "Featured",
+        "Eye masks",
+        "All products"
+      ]
+    },
+    "Heading": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "settings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "block-settings.block-settings"
+    }
+  }
+}

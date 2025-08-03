@@ -41,6 +41,12 @@
     },
     "metaTitle": {
       "type": "string"
+    },
+    "New_arrival": {
+      "type": "boolean"
+    },
+    "Featured_product": {
+      "type": "boolean"
     }
   }
 }

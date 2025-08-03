@@ -392,6 +392,7 @@ export interface ApiContentPageContentPage extends Struct.CollectionTypeSchema {
         'dividers.divider-color-fade',
         'image-background-with-text.image-background-with-text',
         'image-alone.image-alone',
+        'slider.product-slider',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -498,6 +499,7 @@ export interface ApiProductCategoryPageProductCategoryPage
         'image-background-with-text.image-background-with-text',
         'image-alone.image-alone',
         'carrousel-text.carrousel-text',
+        'slider.product-slider',
       ]
     >;
     blocksBeforeProducts: Schema.Attribute.DynamicZone<
@@ -511,6 +513,7 @@ export interface ApiProductCategoryPageProductCategoryPage
         'image-background-with-text.image-background-with-text',
         'image-alone.image-alone',
         'carrousel-text.carrousel-text',
+        'slider.product-slider',
       ]
     >;
     category: Schema.Attribute.String;
@@ -554,6 +557,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       'background-color.background-color',
       false
     >;
+    Featured_product: Schema.Attribute.Boolean;
     imageCoverOrContain: Schema.Attribute.Component<
       'nested-components.image-cover-or-contain',
       true
@@ -567,6 +571,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     metaDescription: Schema.Attribute.Text;
     metaTitle: Schema.Attribute.String;
     name: Schema.Attribute.String;
+    New_arrival: Schema.Attribute.Boolean;
     pdpSlug: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     shortDescription: Schema.Attribute.String;

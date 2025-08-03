@@ -28,7 +28,8 @@
         "dividers.divider-color-fade",
         "image-background-with-text.image-background-with-text",
         "image-alone.image-alone",
-        "carrousel-text.carrousel-text"
+        "carrousel-text.carrousel-text",
+        "slider.product-slider"
       ]
     },
     "blocksAfterProducts": {
@@ -42,7 +43,8 @@
         "dividers.divider-color-fade",
         "image-background-with-text.image-background-with-text",
         "image-alone.image-alone",
-        "carrousel-text.carrousel-text"
+        "carrousel-text.carrousel-text",
+        "slider.product-slider"
       ]
     },
     "category": {
