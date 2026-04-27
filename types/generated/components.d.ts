@@ -306,9 +306,14 @@ export interface NestedComponentsImageCoverOrContain
   extends Struct.ComponentSchema {
   collectionName: 'components_nested_components_image_cover_or_contains';
   info: {
+    description: '';
     displayName: 'imageCoverOrContain';
   };
   attributes: {
+    Background_color: Schema.Attribute.Component<
+      'background-color.background-color',
+      false
+    >;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     isProductImage: Schema.Attribute.Boolean;
   };

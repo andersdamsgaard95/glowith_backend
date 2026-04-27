@@ -1,22 +1,29 @@
 {
   "collectionName": "components_nested_components_image_cover_or_contains",
   "info": {
-    "displayName": "imageCoverOrContain"
+    "displayName": "imageCoverOrContain",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "isProductImage": {
       "type": "boolean"
+    },
+    "Background_color": {
+      "type": "component",
+      "repeatable": false,
+      "component": "background-color.background-color"
     }
   }
 }
