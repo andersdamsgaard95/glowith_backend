@@ -138,7 +138,11 @@ export interface HeroBannerHeroBanner extends Struct.ComponentSchema {
       false
     >;
     Block_height: Schema.Attribute.Enumeration<
-      ['Default 100% view height', 'Smaller 80% view height']
+      [
+        'Default 100% view height',
+        'Smaller 80% view height',
+        'No minimum height',
+      ]
     >;
     button: Schema.Attribute.Component<'button.button', true>;
     heading: Schema.Attribute.String;

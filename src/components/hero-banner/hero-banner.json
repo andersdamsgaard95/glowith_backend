@@ -63,7 +63,8 @@
       "type": "enumeration",
       "enum": [
         "Default 100% view height",
-        "Smaller 80% view height"
+        "Smaller 80% view height",
+        "No minimum height"
       ]
     }
   }
