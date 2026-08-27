@@ -306,6 +306,24 @@ export interface MultiBoxMultiBox extends Struct.ComponentSchema {
   };
 }
 
+export interface NestedComponentsAccordian extends Struct.ComponentSchema {
+  collectionName: 'components_nested_components_accordians';
+  info: {
+    description: '';
+    displayName: 'Accordian';
+    icon: 'bulletList';
+  };
+  attributes: {
+    background_color: Schema.Attribute.Component<
+      'background-color.background-color',
+      false
+    >;
+    buttons: Schema.Attribute.Component<'button.button', true>;
+    heading: Schema.Attribute.String;
+    text: Schema.Attribute.RichText;
+  };
+}
+
 export interface NestedComponentsImageCoverOrContain
   extends Struct.ComponentSchema {
   collectionName: 'components_nested_components_image_cover_or_contains';
@@ -351,6 +369,7 @@ export interface TextWithImageTextWithImage extends Struct.ComponentSchema {
     icon: 'picture';
   };
   attributes: {
+    accordian: Schema.Attribute.Component<'nested-components.accordian', true>;
     button: Schema.Attribute.Component<'button.button', true>;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     imagePosition: Schema.Attribute.Enumeration<['Left (default)', 'Right']>;
@@ -400,6 +419,7 @@ declare module '@strapi/strapi' {
       'multi-box-grid.multi-box-grid': MultiBoxGridMultiBoxGrid;
       'multi-box-row.multi-box-row': MultiBoxRowMultiBoxRow;
       'multi-box.multi-box': MultiBoxMultiBox;
+      'nested-components.accordian': NestedComponentsAccordian;
       'nested-components.image-cover-or-contain': NestedComponentsImageCoverOrContain;
       'slider.product-slider': SliderProductSlider;
       'text-with-image.text-with-image': TextWithImageTextWithImage;

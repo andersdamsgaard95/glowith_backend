@@ -42,6 +42,11 @@
       "type": "component",
       "repeatable": false,
       "component": "background-color.background-color"
+    },
+    "accordian": {
+      "type": "component",
+      "repeatable": true,
+      "component": "nested-components.accordian"
     }
   }
 }

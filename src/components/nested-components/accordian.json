@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_nested_components_accordians",
+  "info": {
+    "displayName": "Accordian",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "button.button"
+    },
+    "background_color": {
+      "type": "component",
+      "repeatable": false,
+      "component": "background-color.background-color"
+    }
+  }
+}
