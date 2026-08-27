@@ -20,10 +20,8 @@
     "isProductImage": {
       "type": "boolean"
     },
-    "Background_color": {
-      "type": "component",
-      "repeatable": false,
-      "component": "background-color.background-color"
+    "packaging_has_ear": {
+      "type": "boolean"
     }
   }
 }

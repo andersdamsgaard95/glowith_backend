@@ -47,6 +47,14 @@
       "type": "component",
       "repeatable": true,
       "component": "nested-components.accordian"
+    },
+    "text_alignment": {
+      "type": "enumeration",
+      "enum": [
+        "top",
+        "center (default)",
+        "bottom"
+      ]
     }
   }
 }

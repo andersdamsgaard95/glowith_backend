@@ -332,12 +332,9 @@ export interface NestedComponentsImageCoverOrContain
     displayName: 'imageCoverOrContain';
   };
   attributes: {
-    Background_color: Schema.Attribute.Component<
-      'background-color.background-color',
-      false
-    >;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     isProductImage: Schema.Attribute.Boolean;
+    packaging_has_ear: Schema.Attribute.Boolean;
   };
 }
 
@@ -378,6 +375,9 @@ export interface TextWithImageTextWithImage extends Struct.ComponentSchema {
       false
     >;
     text: Schema.Attribute.RichText;
+    text_alignment: Schema.Attribute.Enumeration<
+      ['top', 'center (default)', 'bottom']
+    >;
     textBackgroundColor: Schema.Attribute.Component<
       'background-color.background-color',
       false
