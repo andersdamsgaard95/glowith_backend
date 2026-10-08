@@ -403,7 +403,7 @@ export interface TopBottomPaddingTopBottomPadding
 }
 
 declare module '@strapi/strapi' {
-  export module Public {
+  export namespace Public {
     export interface ComponentSchemas {
       'background-color.background-color': BackgroundColorBackgroundColor;
       'block-settings.block-settings': BlockSettingsBlockSettings;
